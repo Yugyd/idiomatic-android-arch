@@ -7,11 +7,12 @@ appcompat = '1.6.1'
 material = '1.9.0'
 composeVersion = '2023.04.01'
 # https://developer.android.com/jetpack/androidx/releases/compose-kotlin#pre-release_kotlin_compatibility
-kotlinCompilerExtensionVersion = '1.4.5'
+kotlinCompilerExtensionVersion = '1.4.8'
 versionsUpdates = '0.47.0'
 hiltVersion = '2.44'
 kspVersion = '1.8.22-1.0.11'
 navigationVersion = '2.7.0'
+mviKotlinVersion = '3.2.1'
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
@@ -70,3 +71,28 @@ navigation-fragment-ktx = { module = 'androidx.navigation:navigation-fragment-kt
 navigation-ui-ktx = { module = 'androidx.navigation:navigation-ui-ktx', version.ref = 'navigationVersion' }
 # Timber
 timber = { module = 'com.jakewharton.timber:timber', version = '5.0.1' }
+# Mvi-Kotlin
+mvikotlin-core = { module = 'com.arkivanov.mvikotlin:mvikotlin', version.ref = 'mviKotlinVersion' }
+mvikotlin-extensions-coroutines = { module = 'com.arkivanov.mvikotlin:mvikotlin-extensions-coroutines', version.ref = 'mviKotlinVersion' }
+mvikotlin-extensions-reaktive = { module = 'com.arkivanov.mvikotlin:mvikotlin-extensions-reaktive', version.ref = 'mviKotlinVersion' }
+mvikotlin-keepers = { module = 'com.arkivanov.mvikotlin:keepers', version.ref = 'mviKotlinVersion' }
+mvikotlin-logging = { module = 'com.arkivanov.mvikotlin:mvikotlin-logging', version.ref = 'mviKotlinVersion' }
+mvikotlin-main = { module = 'com.arkivanov.mvikotlin:mvikotlin-main', version.ref = 'mviKotlinVersion' }
+mvikotlin-rx = { module = 'com.arkivanov.mvikotlin:rx', version.ref = 'mviKotlinVersion' }
+mvikotlin-rx-internal = { module = 'com.arkivanov.mvikotlin:rx-internal', version.ref = 'mviKotlinVersion' }
+mvikotlin-timetravel = { module = 'com.arkivanov.mvikotlin:mvikotlin-timetravel', version.ref = 'mviKotlinVersion' }
+mvikotlin-utils-internal = { module = 'com.arkivanov.mvikotlin:utils-internal', version.ref = 'mviKotlinVersion' }
+
+[bundles]
+mvi-kotlin = [
+    'mvikotlin-core',
+    'mvikotlin-extensions-coroutines',
+    'mvikotlin-extensions-reaktive',
+    'mvikotlin-keepers',
+    'mvikotlin-logging',
+    'mvikotlin-main',
+    'mvikotlin-rx',
+    'mvikotlin-rx-internal',
+    'mvikotlin-timetravel',
+    'mvikotlin-utils-internal'
+]

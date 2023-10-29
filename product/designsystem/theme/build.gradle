@@ -1,0 +1,36 @@
+plugins {
+    id 'quiz.android.library'
+    id 'quiz.android.compose.library'
+}
+
+android {
+    namespace 'com.yugyd.idiomatic.android.arch.theme'
+}
+
+dependencies {
+    // UI
+    implementation libs.appcompat
+    implementation libs.core.ktx
+    implementation libs.constraint.layout
+    implementation libs.material
+
+    // Mvi-Kotlin
+    implementation libs.bundles.mvi.kotlin
+
+    // DI
+    implementation 'javax.inject:javax.inject:1'
+
+    // Lifecycle
+    implementation libs.lifecycle.livedata.ktx
+    implementation libs.lifecycle.viewmodel.ktx
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.0"
+
+    // UI - Compose
+    implementation libs.compose.material3
+    implementation libs.compose.viewmodel
+    implementation libs.compose.lifecycle
+
+    // Navigation
+    implementation libs.navigation.fragment.ktx
+    implementation libs.navigation.ui.ktx
+}

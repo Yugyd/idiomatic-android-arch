@@ -1,10 +1,11 @@
 plugins {
     id 'quiz.android.application'
+    id 'quiz.android.compose.application'
     id 'quiz.android.buildtype.apk.version'
 }
 
 android {
-    namespace 'com.yugyd.idiomatic.android.gradle'
+    namespace 'com.yugyd.idiomatic.android.arch'
 
     defaultConfig {
         applicationId "com.yugyd.idiomatic.android.gradle"
@@ -17,16 +18,32 @@ android {
 }
 
 dependencies {
+    implementation project(":product:main")
+    implementation project(":product:designsystem:components")
+    implementation project(":product:designsystem:theme")
+    implementation project(":product:core:component-ui")
+
     // UI
     implementation libs.appcompat
     implementation libs.core.ktx
     implementation libs.constraint.layout
     implementation libs.material
 
+    // Mvi-Kotlin
+    implementation libs.bundles.mvi.kotlin
+
+    // DI
+    implementation 'javax.inject:javax.inject:1'
+
     // Lifecycle
     implementation libs.lifecycle.livedata.ktx
     implementation libs.lifecycle.viewmodel.ktx
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.0"
+
+    // UI - Compose
+    implementation libs.compose.material3
+    implementation libs.compose.viewmodel
+    implementation libs.compose.lifecycle
 
     // Navigation
     implementation libs.navigation.fragment.ktx
