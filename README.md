@@ -25,7 +25,6 @@ https://arkivanov.github.io/MVIKotlin
 - docs: accompanying documentation for the project
 - gradle: everything related to gradle is the wrapper and libs directory
 - product: the project code base, here is all the functionality of the application
-- sample-app: project configuration of dependencies that a developer needs to develop a feature
 
 ## Stack template project
 
